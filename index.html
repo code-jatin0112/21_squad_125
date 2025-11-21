@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Portfolio - Interactive</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="bg-animation"></div>
+
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">Squad 125</div>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" onclick="scrollToSection('home')">Home</a></li>
+                <li><a href="#course" onclick="scrollToSection('course')">Course</a></li>
+                <li><a href="#motive" onclick="scrollToSection('motive')">About Us</a></li>
+                <li><a href="#mentors" onclick="scrollToSection('mentors')">Mentors</a></li>
+                <li><a href="#squad" onclick="scrollToSection('squad')">Squad</a></li>
+                <li><a href="memories.html">Memories</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <header id="home">
+            <h1>Squad 125</h1>
+            <p class="subtitle">Class of 2029 - Branch Kings, Manager's Fav</p>
+            <div class="stats-container">
+                <div class="stat-box">
+                    <div class="stat-number" id="managerCount">1</div>
+                    <div class="stat-label">Campus-Manager</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number" id="mentorCount">6</div>
+                    <div class="stat-label">Mentors</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number" id="squadCount">19</div>
+                    <div class="stat-label">Squad Members</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number" id="projectCount">∞</div>
+                    <div class="stat-label">Memories</div>
+                </div>
+            </div>
+        </header>
+
+        <div class="section" id="course">
+            <h2>Course Information</h2>
+            <div class="course-info">
+                <div class="course-name">KALVIUM</div>
+                <div class="course-details">
+                    📅 Duration: August 2025 - June 2029<br>
+                    🏢 Department: Computer Science & Engineering<br>
+                    🎓 Institution: JECRC University<br>
+                    💡 Focus: preparing students for a career in software engineering
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="motive">
+            <h2>Squad Description ✨</h2>
+            <p class="motive-text">
+                Our squad is one of the most supportive and kind groups in Kalvium. We are always ready to help each other, no matter the time or situation. Every member contributes something unique, and we learn a lot from one another—whether it's academics, teamwork, or personal growth.
+            </p><br>
+            <button class="filter-btn" id="memoid" onclick="window.location.href='memories.html'">
+                Memories
+            </button>
+        </div>
+
+        <div class="section" id="mentors">
+            <h2>Campus Manager</h2>
+            <div class="mentors-grid">
+                <div class="mentor-card" onclick="showMentorModal('Kanchan Kumari', 'Campus Manager', 'She\'s the campus manager who treats us like her favorite squad, always ready to help with anything!', './images/kanchan.jpg', 'https://www.linkedin.com/in/kanchan', 'https://github.com/kanchan')">
+                    <div class="mentor-name">Kanchan Kumari</div>
+                    <div class="mentor-role">Campus Manager</div>
+                    <div class="mentor-email">📧 kanchankumari@kalvium.community</div>
+                </div>
+            </div>   
+        </div>
+        
+        <div class="section" id="mentors">
+            <h2>Our Mentors</h2>
+            <div class="mentors-grid">
+                <div class="mentor-card" onclick="showMentorModal('Siddesh Gore', 'Tech Mentor for FEWD & DFD', 'He may not know Hindi or English, but in his full-on Maharashtrian tapori style, he explains things better than anyone—king of street-smart explanations!', './images/siddesh.jpg', 'https://www.linkedin.com/in/siddesh-gore', 'https://github.com/siddesh')">
+                    <div class="mentor-name">Siddesh Gore</div>
+                    <div class="mentor-role">Squad Mentor & Tech Mentor</div>
+                    <div class="mentor-email">📧 siddesh.gore@kalvium.community</div>
+                </div>
+                <div class="mentor-card" onclick="showMentorModal('Manav Verma', 'Tech Mentor for PSUP', 'He\'ll roast anyone, explain PSU concepts like a genius, but when it comes to Kartik, his favorite, suddenly the attendance sheet becomes a fun battlefield!', './images/manav.jpg', 'https://www.linkedin.com/in/manav-verma', 'https://github.com/manav')">
+                    <div class="mentor-name">Manav Verma</div>
+                    <div class="mentor-role">Tech Mentor</div>
+                    <div class="mentor-email">📧 manav.verma@kalvium.community</div>
+                </div>
+                <div class="mentor-card" onclick="showMentorModal('Rohith Gupta', 'Tech Mentor for DM', 'He\'s so jolly that even math seems to smile around him, and the clever tricks he teaches are so unforgettable they stick in the brain tighter than exam stress!', './images/rohith.jpg', 'https://www.linkedin.com/in/rohith-gupta', 'https://github.com/rohith')">
+                    <div class="mentor-name">Rohith Gupta</div>
+                    <div class="mentor-role">Tech Mentor</div>
+                    <div class="mentor-email">📧 rohith.gupta@kalvium.community</div>
+                </div>
+                <div class="mentor-card" onclick="showMentorModal('Junaid Khan', 'Tech Mentor for BOCS', 'He treats assignments like optional toppings on a pizza, but when the exam rolls around, we realize he\'s secretly sprinkling genius everywhere and passing other subjects with ease.', './images/junaid.jpg', 'https://www.linkedin.com/in/junaid-khan', 'https://github.com/junaid')">
+                    <div class="mentor-name">Junaid Khan</div>
+                    <div class="mentor-role">Tech Mentor</div>
+                    <div class="mentor-email">📧 junaid.khan@kalvium.community</div>
+                </div>
+                <div class="mentor-card" onclick="showMentorModal('Muskan Srivastava', 'Non-Tech Mentor for CT', 'She\'s sweet, pretty, and the ultimate mentor—her psychology game is so strong that trying to trick her is basically mission impossible!', './images/muskan-s.jpg', 'https://www.linkedin.com/in/muskan-srivastava', 'https://github.com/muskan-s')">
+                    <div class="mentor-name">Muskan Srivastava</div>
+                    <div class="mentor-role">Non-Tech Mentor</div>
+                    <div class="mentor-email">📧 muskan.srivastava@kalvium.community</div>
+                </div>
+                <div class="mentor-card" onclick="showMentorModal('Dr. Muskan Jain', 'Non-Tech Mentor for PSW', 'She\'s the kind of mentor whose heart is so soft it could give a marshmallow an inferiority complex, and whose smile has the magical power to turn any gloomy day into a joyful one.', './images/muskan-j.jpg', 'https://www.linkedin.com/in/muskan-jain', 'https://github.com/muskan-j')">
+                    <div class="mentor-name">Dr. Muskan Jain</div>
+                    <div class="mentor-role">Non-Tech Mentor</div>
+                    <div class="mentor-email">📧 muskan.jain@kalvium.community</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="squad">
+            <h2>Meet Our Squad</h2>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search squad members..." onkeyup="filterSquad()">
+                <span class="search-icon">🔍</span>
+            </div>
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="filterByRole('all')">All</button>
+                <button class="filter-btn" onclick="filterByRole('Developer')">Developers</button>
+                <button class="filter-btn" onclick="filterByRole('Designer')">Designers</button>
+                <button class="filter-btn" onclick="filterByRole('Manager')">Managers</button>
+            </div>
+            <div class="squad-grid" id="squadGrid">
+                <div class="squad-card" data-role="Developer">
+                    <img src="./images/adityapic.jpg" class="student-photo" alt="Aditya">
+                    <div class="squad-name">Aditya Padhy</div>
+                    <button class="view-more-btn" onclick="showModal('Aditya Padhy', 'He\'s the kind of genius who shares his knowledge with everyone—whether they asked for it or not.', 'https://www.linkedin.com/in/aditya-designs', 'https://github.com/aditya')">View More</button>
+                </div>
+
+                <div class="squad-card" data-role="Manager">
+                    <img src="./images/akshatpic.jpg" class="student-photo" alt="Akshat">
+                    <div class="squad-name">Akshat Sahu</div>
+                    <button class="view-more-btn" onclick="showModal('Akshat Sahu', 'He\'s so kind and helpful that he even studies BOCS—the subject nobody wants—just so the rest of us don\'t have to.', 'https://www.linkedin.com/in/akshat-sahu-1ba24538a/', 'https://github.com/akshat')">View More</button>
+                </div>
+
+                <div class="squad-card" data-role="Designer">
+                    <img src="./images/anuragpic.jpg" class="student-photo" alt="Anurag">
+                    <div class="squad-name">Anurag</div>
+                    <button class="view-more-btn" onclick="showModal('Anurag', 'Always lost in their aesthetic world, but somehow still writing HTML and CSS like a pro!', 'https://www.linkedin.com/in/anurag-357170367/', 'https://github.com/anurag')">View More</button>
+                </div>
+
+                <div class="squad-card" data-role="Manager">
+                    <img src="./images/deepakpic.jpg" class="student-photo" alt="Deepak">
+                    <div class="squad-name">Deepak Rajput</div>
+                    <button class="view-more-btn" onclick="showModal('Deepak Rajput', 'Deepak Bhai\'s JavaScript skills are so awesome that the teacher gave him exclusive permission to eat in class!', 'https://www.linkedin.com/in/deepak-rajput-4341b9340/', 'https://github.com/deepak')">View More</button>
+                </div>
+
+                <div class="squad-card" data-role="Developer">
+                    <img src="./images/devashpiv.jpg" class="student-photo" alt="Devesh">
+                    <div class="squad-name">Devesh Sharma</div>
+                    <button class="view-more-btn" onclick="showModal('Devesh Sharma', 'He\'s the CR from Bikaner—home of the best khatta meetha namkeen—yet he still hasn\'t brought any for us; good thing he\'s so metha, otherwise we\'d have removed him from CR duty by now.', 'https://www.linkedin.com/in/devesh-kumar-sharma-0b3b70391/', 'https://github.com/devesh')">View More</button>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; Squad 125 Portfolio. Designed with ❤️ by US</p>
+            <p style="margin-top: 10px;">📧 s.125@kalvium.community | 🌐 www.kalvium.community</p>
+        </footer>
+    </div>
+
+    <div class="scroll-to-top" id="scrollTop" onclick="scrollToTop()">↑</div>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <img id="modalPhoto" class="modal-photo" src="" alt="" style="display: none;">
+            <h3 class="modal-title" id="modalTitle"></h3>
+            <p class="modal-description" id="modalDescription"></p>
+            <div class="modal-links" id="modalLinks"></div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
